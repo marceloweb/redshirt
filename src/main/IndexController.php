@@ -3,6 +3,8 @@
 class IndexController {
     
     public static function index() {
-        return View::render('index');
+        $model = new Model();
+        $response = $model->get();
+        return View::render('index', $response);
     }
 }

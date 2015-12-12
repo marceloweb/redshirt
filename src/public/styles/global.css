@@ -10,17 +10,36 @@ header {
     background: #333;
 }
 
+fieldset {
+    padding: 1em;
+    margin: 10px 0 10px 0;
+}
+
+label {
+    float:left;
+    width:25%;
+    margin-right:0.5em;
+    padding-top:0.2em;
+    text-align:right;
+    font-weight:bold;
+}
+
 #content {
-    margin: 0 auto 0 auto;
+    margin: 3px auto 0 auto;
     width: 80%;
 }
 
+#form {
+    display: none;
+}
+
 .clients {
-    width: 700px;
-    margin-top: 10px;
+    width: 100%;
+    margin-top: 3px;
     background: #999;
 }
 
 .line {
     background: #fff;
 }
+

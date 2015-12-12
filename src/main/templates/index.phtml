@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel=stylesheet href='/styles/global.css' />
+        <script src="/libs/jquery.min.js"></script>
         <script src="/scripts/global.js"></script>
     </head>
     <body>
@@ -10,6 +11,23 @@
         </header>
 
         <div id="content">
+            <a href="#" id="register">Incluir novo</a>
+            <div id="form">
+                <fieldset>
+                    <legend>Cadastro</legend>
+                    <p><label for="nome">Nome</label>
+                    <input type="text" name="nome" /></p>
+                    <p><label for="name">Username:</label>
+                    <input type="text" name="name" id="name" /><p />
+                    <p>
+                    <label for="mail">E-mail:</label>
+                    <input type="text" name="mail" id="mail" /></p>
+                    <p>
+                    <label for="address">Address:</label>
+                    <input type="text" name="address" id="address" size="40" /><p />
+                    <p><button id="send">cadastrar</button></p>
+                </fieldset>
+            </div>
             <table class="clients">
                 <thead>
                     <tr>
@@ -17,15 +35,12 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php foreach ($response as $item): ?>
                     <tr class="line">
-                        <td>Marcelo Oliveira</td> 
-                        <td>São Bernardo do Campo</td>
+                        <td><?=$item['firstname'] . " " . $item['lastname']?></td> 
+                        <td><?=$item['city'] . "-" . $item['uf']?></td>
                     </tr>
-
-                    <tr class="line">
-                        <td>Danúbio Soares</td>
-                        <td>São Bernardo do Campo</td>
-                    </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
