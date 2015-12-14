@@ -1,4 +1,8 @@
 <?php
+/**
+ * Controlador principal
+ * @author Marcelo Oliveira <marcelo@marceloweb.info>
+ */
 
 class IndexController {
 

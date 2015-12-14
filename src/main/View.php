@@ -1,4 +1,8 @@
 <?php
+/**
+ * Direciona para o template requisitado
+ * @author Marcelo Oliveira <marcelo@marceloweb.info>
+ */
 
 class View {
 

@@ -1,4 +1,8 @@
 <?php
+/**
+ * Conexão com base de dados
+ * @author Marcelo Oliveira <marcelo@marceloweb.info>
+ */
 
 class Db {
 

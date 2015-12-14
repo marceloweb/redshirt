@@ -1,6 +1,6 @@
 <?php
 /**
- * Define um 
+ * Trata a requisição
  * @author Marcelo Oliveira <marcelo@marceloweb.info>
  */
 
