@@ -2,8 +2,8 @@
 <html>
     <head>
         <link rel=stylesheet href='/styles/global.css' />
-        <script src="/libs/jquery.min.js"></script>
-        <script src="/scripts/global.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
     </head>
     <body>
         <header>
@@ -15,16 +15,26 @@
             <div id="form">
                 <fieldset>
                     <legend>Cadastro</legend>
-                    <p><label for="nome">Nome</label>
-                    <input type="text" name="nome" /></p>
-                    <p><label for="name">Username:</label>
-                    <input type="text" name="name" id="name" /><p />
-                    <p>
-                    <label for="mail">E-mail:</label>
-                    <input type="text" name="mail" id="mail" /></p>
-                    <p>
-                    <label for="address">Address:</label>
+                    <p><label for="nome">Primeiro nome</label>
+                        <input type="text" name="firstname" id="firstname" /></p>
+                    <p><label for="name">Último nome:</label>
+                    <input type="text" name="lastname" id="lastname" /><p />
+                    <p><label for="mail">E-mail:</label>
+                        <input type="text" name="mail" id="mail" /></p>
+                    <p><label for="mail">Data nascimento:</label>
+                        <input type="text" name="birth" id="birth" /></p>
+                    <p><label for="address">Endereço:</label>
                     <input type="text" name="address" id="address" size="40" /><p />
+                    <p><label for="mail">Complemento:</label>
+                        <input type="text" name="complement" id="complement" /></p>
+                    <p><label for="mail">UF:</label>
+                        <input type="text" name="uf" id="uf" /></p>
+                    <p><label for="mail">Cidade:</label>
+                        <input type="text" name="city" id="city" /></p>
+                    <p><label for="mail">CEP:</label>
+                        <input type="text" name="zipcode" id="zipcode" /></p>
+                    <input type="hidden" name="uf_id" id="uf_id" />
+                    <input type="hidden" name="city_id" id="city_id" />
                     <p><button id="send">cadastrar</button></p>
                 </fieldset>
             </div>
@@ -36,13 +46,16 @@
                 </thead>
                 <tbody>
                     <?php foreach ($response as $item): ?>
-                    <tr class="line">
-                        <td><?=$item['firstname'] . " " . $item['lastname']?></td> 
-                        <td><?=$item['city'] . "-" . $item['uf']?></td>
-                    </tr>
+                        <tr class="line">
+                            <td><?= $item['firstname'] . " " . $item['lastname'] ?></td> 
+                            <td><?= $item['city'] . "-" . $item['uf'] ?></td>
+                        </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
     </body>
 </html>
+<script src="/libs/jquery.min.js"></script>
+<script src="/libs/jquery-ui.min.js"></script>
+<script src="/scripts/global.js"></script>
